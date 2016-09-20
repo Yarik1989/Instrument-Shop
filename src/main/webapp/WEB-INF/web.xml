@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<welcome-file-list>
+		<welcome-file>redirect.jsp</welcome-file>
+	</welcome-file-list>
+	<listener>
+		<listener-class>com.epam.chuikov.listener.ContextListener</listener-class>
+	</listener>
+	<context-param>
+		<param-name>tagStrategy</param-name>
+		<param-value>hidden</param-value>
+	</context-param>
+	<context-param>
+		<param-name>timeOutCaptcha</param-name>
+		<param-value>2000</param-value>
+	</context-param>
+	<context-param>
+		<param-name>captchaDICT</param-name>
+		<param-value>ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789</param-value>
+	</context-param>
+	<context-param>
+		<param-name>captchaLength</param-name>
+		<param-value>5</param-value>
+	</context-param>
+	<context-param>
+		<param-name>repositoryPath</param-name>
+		<param-value>C:\Users\Yaroslav_Chuikov\newworkspace\repository\</param-value>
+	</context-param>
+	<context-param>
+    <param-name>productImagesFolder</param-name>
+    <param-value>C:\Users\Yaroslav_Chuikov\newworkspace\repository\products</param-value>
+  </context-param>
+  <servlet>
+		<servlet-name>MainServlet</servlet-name>
+		<jsp-file>/WEB-INF/jsp/main.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MainServlet</servlet-name>
+		<url-pattern>/main</url-pattern>
+	</servlet-mapping> 
+
+
+</web-app>
